@@ -1,0 +1,367 @@
+body {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container {
+    max-width: 1600px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
+/*Header*/
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #952112;
+    position: relative;
+    z-index: 1;
+}
+
+nav.flexbox {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.8rem;
+    color: #BE9BA2;
+    font-weight: 600;
+}
+
+.nav-menu {
+    width: 25vmax;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-list {
+    text-decoration: none;
+    color: #DFD9D3;
+}
+
+@media only screen and (max-width: 1024px) {
+    .nav-menu {
+        width: 50vmax;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .nav-menu {
+        width: 80vmax;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nav-menu {
+        display: none;
+    }
+}
+
+/*Banner*/
+#banner {
+    background-color: #F5EEE9;
+    height: 85vmin;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#banner div.flexbox {
+    height: 100%;
+    align-items: center;
+}
+
+.banner-info {
+    width: 60vmin;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-info h1 {
+    font-weight: 700;
+    color: #952112;
+    font-size: 12vmin;
+    line-height: 15vmin;
+    margin-bottom: 20px;
+}
+
+.banner-info span {
+    font-family: 'Rubik', sans-serif;
+    font-size: 11vmin;
+}
+
+.banner-info p {
+    font-weight: 600;
+    color: #9D3F33;
+    font-size: 1.1rem;
+    line-height: 5vmin;
+}
+
+.banner-image {
+    width: 50%;
+    min-width: 415px;
+}
+
+.banner-image img {
+    width: 100%;
+    position: relative;
+    bottom: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .banner-info p {
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 780px) {
+    .banner-info {
+        text-align: right;
+        width: 100%;
+    }
+
+    .banner-info p {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .banner-image {
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        opacity: 0.6;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #banner {
+        height: 100vmin;
+    }
+
+    .banner-info p {
+        font-size: 1rem;
+        line-height: 20px;
+    }
+}
+
+/*Services*/
+#services {
+    position: relative;
+    z-index: 1;
+    background-color: #F5F2F0;
+    padding: 100px 0;
+}
+
+.services1,
+.services2 {
+    margin: 100px 0;
+}
+
+#services div.flexbox {
+    justify-content: space-around;
+}
+
+.service-info {
+    width: 55vmin;
+}
+
+.service-info h2 {
+    font-size: 6vmin;
+    line-height: 65px;
+    color: #952112;
+    margin-bottom: 25px;
+}
+
+.service-info p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #B28FA4;
+}
+
+.service-img {
+    width: 55vmin;
+    height: 80vmin;
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.service-img img {
+    width: auto;
+    height: 100%;
+    position: relative;
+}
+
+.services1 img {
+    right: 60px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .service-info h2 {
+        line-height: 50px;
+    }
+
+    .service-info p {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 780px) {
+    #services {
+        padding: 20px 0;
+    }
+
+    #services div.flexbox {
+        flex-direction: column-reverse;
+    }
+
+    .service-info,
+    .service-img {
+        width: 100%;
+    }
+
+    .service-info h2 {
+        margin-bottom: 15px;
+    }
+
+    .service-img {
+        margin-top: 10px;
+        order: -1;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .services1,
+    .services2 {
+        margin: 40px 0;
+    }
+
+    .service-info h2 {
+        line-height: 35px;
+        margin-bottom: 10px;
+    }
+
+    .service-info p {
+        font-size: 1rem;
+    }
+}
+
+/*Slogan*/
+#slogan {
+    background-color: #9D3F33;
+    height: 120vmin;
+}
+
+#slogan div.flexbox {
+    justify-content: center;
+    align-items: center;
+}
+
+#slogan .container {
+    max-width: 1920px;
+    padding: 0;
+}
+
+#slogan h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vmin;
+    font-size: 10vmin;
+    color: #FFF8F0;
+}
+
+#slogan .container .flexbox>div {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+.box1,
+.box5 {
+    height: 45vmin;
+}
+
+.box2,
+.box4 {
+    height: 60vmin;
+}
+
+.box3 {
+    height: 70vmin;
+}
+
+.box1 img,
+.box2 img,
+.box3 img,
+.box4 img,
+.box5 img {
+    width: auto;
+    height: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+
+    #slogan .container .flexbox .box2,
+    #slogan .container .flexbox .box4 {
+        display: none;
+    }
+}
+
+/*Footer*/
+footer {
+    background-color: #9D3F33;
+}
+
+#footer {
+    height: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF8F0;
+    font-size: 2vmin;
+}
